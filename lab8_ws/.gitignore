@@ -1,0 +1,15 @@
+**/__pycache__/
+**/build/
+**/install/
+**/log/
+**/out/
+**/data/
+.idea
+.vscode/
+**/*.aux
+**/*.log
+**/*.out
+**/*.synctex.gz
+**/*.pt
+**/.DS_Store
+**/__MACOSX

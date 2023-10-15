@@ -1,0 +1,10 @@
+**/.git/
+**/.github/
+**.gitignore
+**.md
+LICENSE
+Dockerfile
+**/__pycache__/
+**/build/
+**/install/
+**/log/

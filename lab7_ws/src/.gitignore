@@ -1,0 +1,11 @@
+**/__pycache__/
+**/build/
+**/install/
+**/log/
+**/out/
+**/data/
+.vscode/
+**/*.aux
+**/*.log
+**/*.out
+**/*.synctex.gz
