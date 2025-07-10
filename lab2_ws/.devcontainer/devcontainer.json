@@ -1,0 +1,54 @@
+{
+  "name": "lab2_ws-dev",
+  "build": {
+    "dockerfile": "../src/Dockerfile"
+  },
+  "workspaceFolder": "/root/lab2_ws",
+  "mounts": [
+    "source=${localWorkspaceFolder}/src,target=/root/lab2_ws/src,type=bind,consistency=cached"
+  ],
+  "postCreateCommand": "zsh -c 'source /opt/ros/foxy/setup.zsh && colcon build && source /sim_ws/install/setup.zsh'",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh",
+
+        "cmake.sourceDirectory": "/root/lab2_ws/src",
+        "cmake.generator": "Ninja",
+        "cmake.configureOnOpen": false,
+        "cmake.buildDirectory": "${workspaceFolder}/build",
+        "cmake.configureEnvironment": {
+          "AMENT_PREFIX_PATH": "/opt/ros/foxy"
+        },
+        "cmake.buildEnvironment": {
+          "AMENT_PREFIX_PATH": "/opt/ros/foxy"
+        },
+
+        "python.autoComplete.extraPaths": [
+          "/opt/ros/foxy/lib/python3.8/site-packages"
+        ],
+        "python.analysis.extraPaths": [
+          "/opt/ros/foxy/lib/python3.8/site-packages"
+      ]
+      },
+      "extensions": [
+        "ranch-hand-robotics.rde-ros-2",
+        "ranch-hand-robotics.urdf-editor",
+        "ranch-hand-robotics.rde-pack",
+        
+        "ms-vscode.cpptools",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-vscode.cpptools-themes",
+        "ms-vscode.cmake-tools",
+
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugpy",
+
+        "grapecity.gc-excelviewer",
+
+        "aaron-bond.better-comments"
+      ]
+    }
+  }
+}
